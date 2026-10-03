@@ -1,0 +1,23 @@
+{
+  "name": "ball-up-project",
+  "version": "1.0.0",
+  "description": "simple Nba dashboard built with HTML, CSS, and JavaScript that brings together live games, league standings, player stats, and other sports information in one place and It also fetches a public API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpsarmiento18/Ball-up-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpsarmiento18/Ball-up-project/issues"
+  },
+  "homepage": "https://github.com/jpsarmiento18/Ball-up-project#readme",
+  "dependencies": {
+    "env": "^0.0.2"
+  }
+}
