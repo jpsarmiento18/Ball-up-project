@@ -1,109 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BallUp</title>
-    <link rel="stylesheet" href="home.css" />
-    <script src="/home.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BallUp</title>
+  <link rel="stylesheet" href="home.css" />
+  <script src="home.js" defer></script>
 </head>
-
 <body>
+  <header>
+    <a href="#" class="brand">
+      <img src="img/slamdunk.svg" alt="BallUp logo" width="32" height="32" />
+      BallUp
+    </a>
+    <input type="search" id="search" placeholder="Search a player..." />
+  </header>
 
-    <header class="topbar">
-        <a href="#" class="brand" aria-label="BallUp home">
-            <img src="img/slamdunk.svg" alt="" class="brand-logo" width="32" height="32" />
-            <span class="brand-name">BallUp</span>
-        </a>
+  <aside>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">Games</a>
+      <a href="#">Players</a>
+    </nav>
+  </aside>
 
-        <form class="search" id="search-form" role="search">
-            <input type="search" id="search-input" name="search" placeholder="Search a player..." autocomplete="off" />
-            <ul class="search-results" id="search-results" hidden></ul>
-        </form>
-    </header>
+  <main>
+    <section id="games">
+      <h2>Live Games</h2>
+      <ul id="games-list"></ul>
+    </section>
 
-    <div class="layout">
+    <section id="players">
+      <h2>Players</h2>
+      <ul id="players-list"></ul>
+    </section>
 
-        <aside class="sidebar">
-            <nav aria-label="Main">
-                <ul class="nav-list">
-                    <li><a href="#" class="nav-link active" data-view="home" aria-current="page">Home</a></li>
-                    <li><a href="#" class="nav-link" data-view="games">Games</a></li>
-                    <li><a href="#" class="nav-link" data-view="players">Players</a></li>
-                </ul>
-            </nav>
-        </aside>
-
-        <main class="dashboard" id="main">
-
-            <section class="panel panel-games" aria-labelledby="games-heading">
-                <div class="panel-header">
-                    <h2 id="games-heading">Live Games</h2>
-                    <span class="panel-meta" id="games-date"></span>
-                </div>
-                <p class="panel-status" id="games-status">Loading games...</p>
-                <ul class="games-list" id="games-list"></ul>
-            </section>
-
-            <section class="panel panel-players" aria-labelledby="players-heading">
-                <div class="panel-header">
-                    <h2 id="players-heading">Players</h2>
-                    <a href="#" class="panel-link" data-view="players">View all</a>
-                </div>
-                <p class="panel-status" id="players-status">Loading players...</p>
-                <ul class="players-list" id="players-list"></ul>
-            </section>
-
-            <section class="panel panel-teams" aria-labelledby="teams-heading">
-                <div class="panel-header">
-                    <h2 id="teams-heading">Teams</h2>
-                    <select id="conference-filter" aria-label="Filter by conference">
-                        <option value="all">All</option>
-                        <option value="East">East</option>
-                        <option value="West">West</option>
-                    </select>
-                </div>
-                <p class="panel-status" id="teams-status">Loading teams...</p>
-                <ul class="teams-list" id="teams-list"></ul>
-            </section>
-
-        </main>
-    </div>
-
-    <template id="game-template">
-        <li class="game-card">
-            <div class="game-team away">
-                <span class="team-abbr"></span>
-                <span class="team-score"></span>
-            </div>
-            <div class="game-info">
-                <span class="game-status"></span>
-                <span class="game-period"></span>
-            </div>
-            <div class="game-team home">
-                <span class="team-abbr"></span>
-                <span class="team-score"></span>
-            </div>
-        </li>
-    </template>
-
-    <template id="player-template">
-        <li class="player-row">
-            <span class="player-name"></span>
-            <span class="player-position"></span>
-            <span class="player-team"></span>
-        </li>
-    </template>
-
-    <template id="team-template">
-        <li class="team-row">
-            <span class="team-abbr"></span>
-            <span class="team-name"></span>
-            <span class="team-conference"></span>
-        </li>
-    </template>
-
+    <section id="teams">
+      <h2>Teams</h2>
+      <ul id="teams-list"></ul>
+    </section>
+  </main>
 </body>
-
 </html>
