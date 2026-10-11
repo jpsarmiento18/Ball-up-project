@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/jpsarmiento18/Ball-up-project#readme",
   "dependencies": {
-    "env": "^0.0.2",
-    "vite": "^8.3.2"
+    "env": "^0.0.2"
+  },
+  "devDependencies": {
+    "vite": "^8.3.4"
   }
 }
