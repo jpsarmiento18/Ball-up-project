@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BallUp</title>
   <link rel="stylesheet" href="home.css" />
   <script type="module" src="home.js" defer></script>
+  <script type="module" src="players.js" defer></script>
+  <script type="module" src="teams.js" defer></script>
 </head>
+
 <body>
   <header>
     <a href="#" class="brand">
@@ -33,6 +37,12 @@
     <section id="players">
       <h2>Players</h2>
       <ul id="players-list"></ul>
+      
+      <div class="pagination">
+        <button id="prev-btn">Previous</button>
+        <span id="page-label">Page 1</span>
+        <button id="next-btn">Next</button>
+      </div>
     </section>
 
     <section id="teams">
@@ -41,4 +51,5 @@
     </section>
   </main>
 </body>
+
 </html>
