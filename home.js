@@ -1,5 +1,6 @@
 
 const liveGames = document.getElementById('games-list');
+const liveTitle = document.getElementById('live-games');
 const apiUrl = import.meta.env.VITE_API_URL;
 const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -37,6 +38,7 @@ async function fetchGames() {
 
         if (games.length === 0) {
             const playoffs = await getGames(`${apiUrl}/games?seasons[]=2025&postseason=true&per_page=100`);
+            liveTitle.textContent = 'No live games at the moment..'
             games = playoffs
                 .sort((a, b) => new Date(b.date) - new Date(a.date))
                 .slice(0, 7);

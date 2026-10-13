@@ -17,7 +17,7 @@
       <img src="img/slamdunk.svg" alt="BallUp logo" width="32" height="32" />
       BallUp
     </a>
-    <input type="search" id="search" placeholder="Search a player..." />
+    <input type="search" id="search" placeholder="Search a player/team..." />
   </header>
 
   <aside>
@@ -30,14 +30,14 @@
 
   <main>
     <section id="games">
-      <h2>Live Games</h2>
+      <h2 id="live-games">Live Games</h2>
       <ul id="games-list"></ul>
     </section>
 
     <section id="players">
       <h2>Players</h2>
       <ul id="players-list"></ul>
-      
+
       <div class="pagination">
         <button id="prev-btn">Previous</button>
         <span id="page-label">Page 1</span>
@@ -47,7 +47,14 @@
 
     <section id="teams">
       <h2>Teams</h2>
+      <p id="conference-label"></p>
       <ul id="teams-list"></ul>
+      
+      <div class="conference-tabs">
+        <button id="east-btn" class="active">East</button>
+        <button id="west-btn">West</button>
+      </div>
+      
     </section>
   </main>
 </body>
