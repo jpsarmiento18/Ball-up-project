@@ -1,6 +1,7 @@
 
 const liveGames = document.getElementById('games-list');
 const liveTitle = document.getElementById('live-games');
+const searchInput = document.getElementById('search');
 const apiUrl = import.meta.env.VITE_API_URL;
 const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -62,3 +63,33 @@ async function fetchGames() {
 }
 
 fetchGames();
+
+async function searchPlayers() {
+    const query = searchInput.value.trim();
+    if(query === "") {
+        return;
+    }
+
+    try {
+        const response = await fetch(`https://api.balldontlie.io/v1/players?search=${query}`, {
+            headers: { Authorization: apiKey },
+        });
+        if (!response.ok) {
+            throw new Error(`Request failed: ${response.status}`);
+        }
+        const player = await response.json();
+        console.log(player);
+    } catch (error) {
+        console.log(error)
+    }
+
+}
+
+searchInput.addEventListener('keydown', (e) => {
+    
+    if (e.key === "Enter") {
+        e.preventDefault()
+        searchPlayers();
+    }
+
+})
