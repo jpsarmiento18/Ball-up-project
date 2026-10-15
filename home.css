@@ -118,6 +118,74 @@ h2 {
   border-radius: 4px;
 }
 
+
+#conference-label {
+  margin: 10px 15px 5px;
+  font-weight: bold;
+}
+
+.conference-tabs {
+  display: flex;
+  gap: 4px;
+  margin: 15px 15px 0;
+  padding: 4px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.conference-tabs button {
+  padding: 6px 18px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.conference-tabs button:hover {
+  color: #222;
+}
+
+.conference-tabs button.active {
+  background: white;
+  color: #222;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+}
+
+#page-label {
+  color: #666;
+  font-size: 14px;
+}
+
+.pagination button {
+  padding: 6px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  color: #222;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background: #f0f0f0;
+}
+
+.pagination button:disabled {
+  color: #bbb;
+  cursor: not-allowed;
+  background: white;
+}
+
 @media (max-width: 800px) {
   body,
   main {
@@ -128,9 +196,4 @@ h2 {
   #games {
     grid-column: auto;
   }
-}
-
-#conference-label {
-  margin: 10px 15px 5px;
-  font-weight: bold;
 }

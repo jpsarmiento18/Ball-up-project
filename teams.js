@@ -54,3 +54,4 @@ eastBtn.addEventListener('click', () => showConference('East'));
 westBtn.addEventListener('click', () => showConference('West'));
 
 fetchTeams();
+
